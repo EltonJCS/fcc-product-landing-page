@@ -1,0 +1,140 @@
+:root {
+  --color-header-dark: #08080a;
+  --color-primary: #00020e;
+  --color-secondary: rgb(155, 0, 0);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+#header {
+  background-color: var(--color-header-dark);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 4px var(--color-secondary);
+  margin-bottom: 4rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+#header-img {
+  width: 16rem;
+  padding: 1rem;
+}
+
+#nav-bar {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 1rem 0;
+  margin-right: 1rem;
+}
+#nav-bar a:hover {
+  background: linear-gradient(
+    0deg,
+    var(--color-header-dark) 0%,
+    rgba(155, 0, 0, 0.5) 25%,
+    var(--color-header-dark) 35%
+  );
+}
+
+.container {
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+video {
+  width: 50vw;
+  border-radius: 0.5rem;
+}
+#video-container {
+  width: fit-content;
+  background-color: var(--color-header-dark);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+#form-container {
+  background-color: var(--color-header-dark);
+  font-size: 2rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+#email {
+  font-size: 1.6rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: var(--color-primary);
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+}
+
+.btn {
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: var(--color-secondary);
+  color: whitesmoke;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--color-primary);
+}
+.btn:active {
+  background-color: var(--color-primary);
+  box-shadow: 0px 0px 2px whitesmoke inset;
+}
+
+footer p {
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+@media screen and (max-width: 456px) {
+  #header {
+    flex-direction: column;
+  }
+  #header-img {
+    align-self: center;
+  }
+}
